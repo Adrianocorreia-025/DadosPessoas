@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Nome_Mail_Numero</string>
+    <string name="mail">mail</string>
+    <string name="enviar">Enviar</string>
+    <string name="nome">Nome</string>
+    <string name="phone">Phone</string>
 </resources>
