@@ -21,18 +21,8 @@ class MainActivity : AppCompatActivity() {
         val editTextNumero = findViewById<EditText>(R.id.editTextPhone)
         val Numero = editTextNumero.text.toString()
 
-        if(Nome.isBlank()){
+        if(Nome.isBlank() || mail.isBlank()||Numero.isBlank()){
             editTextNome.error = getString(R.string.mensagem_vazia)
-            return
-        }
-
-        if(Nome.isBlank()){
-            editTextEmail.error = getString(R.string.mensagem_vazia)
-            return
-        }
-
-        if(Nome.isBlank()){
-            editTextNumero.error = getString(R.string.mensagem_vazia)
             return
         }
 
@@ -40,14 +30,18 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra(Companion.iNFOnOME, Nome)
         startActivity(intent)
 
-        val intent_B = Intent(this,ReceberSmS::class.java)
-        intent.putExtra(Companion.iNFOnOME, Nome)
+        val intent_A = Intent(this,ReceberSmS::class.java)
+        intent.putExtra(Companion.MailPessao,mail)
         startActivity(intent)
 
-
+        val intent_B = Intent(this,ReceberSmS::class.java)
+        intent.putExtra(Companion.NumeroPessoa,Numero)
+        startActivity(intent)
     }
 
     companion object {
         const val iNFOnOME = "NOME"
+        const val MailPessao = "mail"
+        const val NumeroPessoa = "NumeroPessoa"
     }
 }
