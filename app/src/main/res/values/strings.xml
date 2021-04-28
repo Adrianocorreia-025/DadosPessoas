@@ -5,4 +5,6 @@
     <string name="nome">Nome</string>
     <string name="phone">Phone</string>
     <string name="mensagem_vazia">Phone</string>
+    <string name="textview">TextView</string>
+
 </resources>
